@@ -24,6 +24,9 @@
             name="categories"
             class="header__filter-select"
           >
+            <option value="">
+              All
+            </option>
             <option
               v-for="cat in categories"
               :key="cat"
@@ -228,11 +231,16 @@ body {
     &-select {
       margin-left: 10px;
       background-color: #000;
-      padding: 5px 10px;
+      padding: 5px 30px 5px 10px;
       border: 1px solid transparent;
       color: rgb(255 255 255 / 60%);
       font-family: inherit;
       text-transform: capitalize;
+      appearance: none;
+      background-image: url("~@/assets/select-arrow.svg");
+      background-repeat: no-repeat;
+      background-color: #000;
+      background-position: right .7em top 50%, 0 0;
     }
 
     &-random {
